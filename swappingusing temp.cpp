@@ -4,10 +4,9 @@ using namespace std;
 
 void swapNumbers(int x,int y)
 {
-	int t;
-	t=x;
-	x=y;
-	y=t;
+	x=x*y;
+	y=x/y;
+	x=x/y;
 	cout<<"\nNumbers after Swapping:\na= "<<x<<"\tb= "<<y;
 }
 
