@@ -98,18 +98,15 @@ int main()
 }
 
 Flight compareFlightbyDistance(Flight m[])
-	{
-	int i,pos,a[5];
+{
+	int i,pos;
 	for (i=0;i<5;i++)
 	 {
-		a[i]=m[i].getdistance();
-		if(a[i]>500)
-			{
-				return m[i];
-			}
+		if(m[i].getdistance()>500)
+			return m[i];
 		break;
 	 } 	
-	}
+}
 	
 bool checkduplicates(Flight c1,Flight c2)
 {
@@ -122,25 +119,19 @@ bool checkduplicates(Flight c1,Flight c2)
 
 Flight orderbyjourneyTime(Flight v[])
 {
-	Flight x;
-    int b[5],i,j;
-	for (i=0;i<5;i++)
+	Flight key;
+	int i,k;
+	for (i=1;i<5;i++)
 	{
-	    b[i]=v[i].getjourneyTime();
-	}
-	for	(i=0;i<5;i++)//
-	{
-		for (j=i+1;j<5;j++)//550 750 400
-		{
-			if(b[i]>b[j])
-			{
-			    x=v[i];
-				v[i]=v[j];
-				v[j]=x;	
-			}
-		}
-		
-	}
+	   key=v[i];
+	   k=i-1;
+	   while(k>=0 && v[k].getjourneyTime()>key.getjourneyTime())
+	   {
+	   	v[k+1]=v[k];
+	   	k--;
+	   }
+		v[k+1]=key;
+	}	
 	cout<<"\nFlights arrangement in Ascending order of Journey Time:";
 	for (i=0;i<5;i++)
 	{
