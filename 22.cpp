@@ -17,6 +17,14 @@ void Array ::getarray()
 	}
 }
 
+void Array::display()
+{
+	for(int i=0;i<5;i++)
+	{
+		cout<<"\t"<<this->a[i];
+	}
+}
+
 void calculate(Array a,Array b)
 {
 	int i,j;
@@ -27,13 +35,6 @@ void calculate(Array a,Array b)
     
 }
 
-void Array::display()
-{
-	for(int i=0;i<5;i++)
-	{
-		cout<<"\t"<<this->a[i];
-	}
-}
 int main()
 {
 	Array a1={45,78,62,43,31};
