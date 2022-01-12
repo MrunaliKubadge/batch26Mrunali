@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include<iomanip>
 using namespace std;
 
 class Account
@@ -165,7 +166,7 @@ void Account::searchAcc()
 
 void Account::show(int index)
 {
-    cout<<"\nAccount Number:"<<ACC[index].accNo;
+    cout<<setprecision(10)<<"\nAccount Number:"<<ACC[index].accNo;
     cout<<"\nAccount holder's Name:"<<ACC[index].name;
     cout<<"\nAccount Balance:Rs."<<ACC[index].balance;
 }
