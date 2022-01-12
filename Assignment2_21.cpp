@@ -38,7 +38,7 @@ int main()
 	
 	e[0].addEnquiry(652,"Jason Wood","London","6119856754","25/8/2006");
 	e[1].addEnquiry(82,"Lily Collins","California","6522498756","2/6/2004");
-	e[0].addEnquiry(459,"Cheryl Kingsley","Moscow","5648915756","6/12/2018");
+	e[2].addEnquiry(459,"Cheryl Kingsley","Moscow","5648915756","6/12/2018");
 	
 	for(int i=0;i<3;i++)
 	{
